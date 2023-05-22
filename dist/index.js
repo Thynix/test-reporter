@@ -2195,7 +2195,7 @@ function parseIsoDate(str) {
 }
 exports.parseIsoDate = parseIsoDate;
 function getFirstNonEmptyLine(stackTrace) {
-    const lines = stackTrace.split(/\r?\n/g);
+    const lines = stackTrace ? stackTrace.split(/\r?\n/g) : [];
     return lines.find(str => !/^\s*$/.test(str));
 }
 exports.getFirstNonEmptyLine = getFirstNonEmptyLine;
